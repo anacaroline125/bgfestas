@@ -30,7 +30,8 @@ hr{
 }
 .cart-item{
     display: flex;
-    justify-content: space-between; 
+    justify-content: space-between;
+    align-items: center;
 }
 .cart-item select{
     text-align: right;
@@ -54,11 +55,14 @@ hr{
 }
 .geral{
     display: flex;
+    height: 100%;
 }
-.esquerda{
+.esquerda, .direita{
     display: flex;
     align-items: center;
     justify-content: center;
+    flex: 1 1 0;
+    flex-direction: column;
 }
 .card{
     font-family: "Inter", sans-serif;
@@ -68,12 +72,17 @@ hr{
     border-radius: 10px;
     background-color: #FBF7F4;
 }
+
+.card header {
+    display: flex;
+    justify-content: space-around;
+    padding: 0 4rem;
+}
 .form-section {
     display: flex;
     justify-content: space-around;
     margin-bottom: 20px;
     gap: 2rem;
-
 }
 .form-section input{
     width: 100%;
@@ -82,7 +91,7 @@ hr{
     border: 1px solid #ccc;
     border-radius: 5px;
 }
-.numero-etapa-certa {
+.numero-etapa-certa div{
     display: inline-block;
     width: 2.5rem;
     height: 2.5rem;
@@ -93,7 +102,17 @@ hr{
     color: white;
     font-size: 18px;
 }
-.numero-etapa{
+.numero-etapa-certa h5{
+    color: #3B3837;
+    font-weight: 500;
+    font-size: 0.75rem;
+}
+.numero-etapa h5{
+    color: #7F7977;
+    font-weight: 500;
+    font-size: 0.75rem;
+}
+.numero-etapa div{
     display: inline-block;
     width: 2.5rem;
     height: 2.5rem;
@@ -102,23 +121,21 @@ hr{
     background-color: #EDE8E1;
     border-radius: 50%; /* Bordas arredondadas (círculo) */
 }
-
-.numero-etapa {
-    display: inline-block;
-    width: 2.5rem;
-    height: 2.5rem;
-    line-height: 2.5rem;
-    text-align: center;
-    border-radius: 50%;
-    color: black;
-    font-size: 18px;
+.carrinho{
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
 }
-
 form input {
     width: 100%;
     padding: 0.6rem;
     margin-bottom: 1rem;
     border: 1px solid #ccc;
     border-radius: 4px;
+}
+.form-carrinho{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
 }
 

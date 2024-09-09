@@ -1,95 +1,110 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style.css">
-    <title>BGFestas</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/style.css">
+  <title>BGFestas</title>
 </head>
+
 <body>
-    <div class="geral">
-        <div class="esquerda">
-            <form class="card">
-              <div class="numero-etapa-certa">1</div>
-              <div class="numero-etapa">2</div>
-              <div class="numero-etapa">3</div>
-                <div class="form-section">
-                    <div>
-                        <h3>Data da entrega</h3>
-                        <input type="date" required>
-                    </div>
-                    <div>
-                        <h3>Horário da entrega</h3>
-                        <input type="time" required>
-                    </div>
-                </div>
-                <div class="form-section">
-                    <div>
-                        <h3>Data da retirada</h3>
-                        <input type="date" required>
-                    </div>
-                    <div>
-                        <h3>Horário da retirada</h3>
-                        <input type="time" required>
-                    </div>
-                </div>
-                <div class="form-carrinho">
-                    <h3>Carrinho de compras</h3>
-                    <div class="cart-item">
-                      <label for="jogos">Jogos (1 mesa + 4 cadeiras)</label>
-                      <select id="jogos" name="jogos">
-                        <option value="0">Qtd: 0</option>
-                        <option value="1">Qtd: 1</option>
-                        <option value="2">Qtd: 2</option>
-                        <option value="3">Qtd: 3</option>
-                      </select>
-                    </div>
-                    <div class="cart-item">
-                        <label for="mesas">Mesas avulsas</label>
-                        <select id="mesas" name="mesas">
-                          <option value="0">Qtd: 0</option>
-                          <option value="1">Qtd: 1</option>
-                          <option value="2">Qtd: 2</option>
-                        </select>
-                      </div>
-                      <div class="cart-item">
-                        <label for="cadeiras">Cadeiras avulsas</label>
-                        <select id="cadeiras" name="cadeiras">
-                          <option value="0">Qtd: 0</option>
-                          <option value="1">Qtd: 1</option>
-                          <option value="2">Qtd: 2</option>
-                        </select>
-                      </div>
-                      <div class="order-summary">
-                        <h3>Resumo do pedido</h3>
-                        <div class="item">
-                          <span>Jogos:</span>
-                          <span class="valor">R$ 20,00</span>
-                        </div>
-                        <div class="item">
-                          <span>Mesas avulsas:</span>
-                          <span class="valor">R$ 0,00</span>
-                        </div>
-                        <div class="item">
-                          <span>Cadeiras avulsas:</span>
-                          <span class="valor">R$ 0,00</span>
-                        </div>
-                        <div class="item">
-                          <span>Frete e manuseio:</span>
-                          <span  class="valor">R$ 30,00</span>
-                        </div>
-                        <hr>
-                        <div class="resumo-pedido">
-                            <div class="total">
-                                <strong>Total do pedido:</strong>
-                                <strong class="valor">R$ 50,00</strong>
-                            </div>
-                            <button class="btn-prosseguir">Prosseguir</button>
-                        </div>
-                    </div>
+  <div class="geral">
+    <div class="esquerda">
+      <form class="card">
+        <header>
+          <div class="numero-etapa-certa">
+            <div>1</div>
+            <h5>Pedido</h5>
+          </div>
+          <div class="numero-etapa">
+            <div>2</div>
+            <h5>Entrega</h5>
+          </div>
+          <div class="numero-etapa">
+            <div>3</div>
+            <h5>Contato</h5>
+          </div>
+        </header>
+        <div class="form-section">
+          <div>
+            <label for="dateDeEntrega"><span>*</span> Data da entrega</label>
+            <input name="dataDeEntrega" id="dataDeEntrega" type="date" required>
+          </div>
+          <div>
+            <label for="dateDeEntrega"><span>*</span> Horário de entrega</label>
+            <input type="time" name="horarioDaEntrega" id="horaioDaEntrega" required>
+          </div>
         </div>
-        </form>
-        <form class="card">
+        <div class="form-section">
+          <div>
+            <label for="dataDeRetirada"><span>*</span> Data de Retirada</label>
+            <input type="date" name="dataDeRetirada" id="dataDeRetirada" required>
+          </div>
+          <div>
+            <label for="horarioDaRetirada"><span>*</span>Horário de Retirada</label>
+            <input type="time" name="horarioDaRetirada" id="horarioDaRetirada" required>
+          </div>
+        </div>
+        <div class="form-carrinho">
+          <h3>Carrinho de compras</h3>
+          <div class="carrinho">
+            <div class="cart-item">
+              <label for="jogos">Jogos (1 mesa + 4 cadeiras)</label>
+              <select id="jogos" name="jogos">
+                <option value="0">Qtd: 0</option>
+                <option value="1">Qtd: 1</option>
+                <option value="2">Qtd: 2</option>
+                <option value="3">Qtd: 3</option>
+              </select>
+            </div>
+            <div class="cart-item">
+              <label for="mesas">Mesas avulsas</label>
+              <select id="mesas" name="mesas">
+                <option value="0">Qtd: 0</option>
+                <option value="1">Qtd: 1</option>
+                <option value="2">Qtd: 2</option>
+              </select>
+            </div>
+            <div class="cart-item">
+              <label for="cadeiras">Cadeiras avulsas</label>
+              <select id="cadeiras" name="cadeiras">
+                <option value="0">Qtd: 0</option>
+                <option value="1">Qtd: 1</option>
+                <option value="2">Qtd: 2</option>
+              </select>
+            </div>
+          </div>
+          <div class="order-summary">
+            <h3>Resumo do pedido</h3>
+            <div class="item">
+              <span>Jogos:</span>
+              <span class="valor">R$ 20,00</span>
+            </div>
+            <div class="item">
+              <span>Mesas avulsas:</span>
+              <span class="valor">R$ 0,00</span>
+            </div>
+            <div class="item">
+              <span>Cadeiras avulsas:</span>
+              <span class="valor">R$ 0,00</span>
+            </div>
+            <div class="item">
+              <span>Frete e manuseio:</span>
+              <span class="valor">R$ 30,00</span>
+            </div>
+            <hr>
+            <div class="resumo-pedido">
+              <div class="total">
+                <strong>Total do pedido:</strong>
+                <strong class="valor">R$ 50,00</strong>
+              </div>
+              <button class="btn-prosseguir">Prosseguir</button>
+            </div>
+          </div>
+        </div>
+      </form>
+      <!-- <form class="card">
           <div class="numero-etapa">1</div>
           <div class="numero-etapa-certa">2</div>
           <div class="numero-etapa">3</div>
@@ -126,10 +141,13 @@
           </div>
 
           <button type="submit" class="btn-prosseguir">Prosseguir</button>
-        </form>
-        <div class="direita"></div>
-            <img src="aaaa" alt="">
-        </div>
+        </form> -->
+
+    </div>
+
+    <div class="direita">
+      <img src="aaaa" alt="">
     </div>
 </body>
+
 </html>
